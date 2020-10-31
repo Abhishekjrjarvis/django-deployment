@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>First App</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/app.css" %}"/>
+</head>
+<body>
+	<h1> At AccessRecord </h1>
+	<h4> name and date </h4>
+	<div>
+		{% if insert_me %}
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Date</th>
+			</thead>
+			{% for a in insert_me %}
+			<tr>
+				<td>{{a.title}}</td>
+				<td>{{a.date}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+</body>
+</html>
